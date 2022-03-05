@@ -35,13 +35,13 @@ html {
 html,
 html[data-theme="light"] {
 	--very-light-text-color: rgb(236, 237, 238);
-	--light-text-color: #bbb;
-	--medium-text-color: #555;
+	--light-text-color: #C17EA3;
+	--medium-text-color: #84315F;
 	--main-text-color: #333;
 	--dark-text-color: #111;
-	--link-color: #df0505;
+	--link-color: #ED1166;
 
-	background-color: #f2f2f2;
+	background-color: #EDDDE7;
 
 	#theme-toggle div {
 		position: relative;
@@ -93,13 +93,13 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
 	--very-light-text-color: #333;
-	--light-text-color: #444;
-	--medium-text-color: #888;
+	--light-text-color: #ED1166;
+	--medium-text-color: #ED1166;
 	--main-text-color: #ddd;
 	--dark-text-color: #eee;
-	--link-color: #df0505;
+	--link-color: #559AFF;
 
-	background-color: #0d1117;
+	background-color: #162547;
 
 	#theme-toggle div {
 		position: relative;
@@ -159,7 +159,7 @@ body {
 a {
 	color: var(--link-color);
 	text-decoration-skip-ink: auto;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 .post p {
