@@ -1,8 +1,8 @@
-site: Asko
+site: Nonker Journal
 url: #yoururl
-title: Asko
+title: Nonker Journal
 description: Simple and minimalistic jekyll blogging theme.
-googlewebfonts: Fira+Code:wght@400;500;700
+googlewebfonts: NotoSans
 twitter:
   username: #yourusername
   card: summary

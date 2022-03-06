@@ -15,10 +15,7 @@ layout: default
             <div></div>
         </button>
     </div>
-    <p>Maecenas euismod, ante eu mollis tempus, justo tellus tempus dui, non suscipit tellus diam vel ipsum. Phasellus
-        euismod auctor <a href="#">condimentum</a>. Aenean at ex dolor. Praesent eget venenatis erat, sit amet cursus
-        nulla. Vestibulum
-        rutrum, turpis id aliquam sagittis.
+    <p>Welcome to journal of nonkerdoob. This exist simply as a place for him to write.
     </p>
 </section>
 
@@ -27,7 +24,7 @@ layout: default
     <ul>
         {% for post in site.posts %}
         <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <a class="main-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time></li>
         {% endfor %}
     </ul>

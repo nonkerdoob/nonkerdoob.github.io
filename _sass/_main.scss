@@ -34,16 +34,17 @@ html {
 
 html,
 html[data-theme="light"] {
-	--very-light-text-color: rgb(236, 237, 238);
-	--light-text-color: #C17EA3;
-	--medium-text-color: #84315F;
+	--very-light-text-color: #E9F8FD;
+	--light-text-color: #E91369;
+	--medium-text-color: #E91369;
 	--main-text-color: #333;
 	--dark-text-color: #111;
-	--link-color: #ED1166;
+	--link-color: #5793C8;
 	--display-dark: none;
 	--display-light: block;
+	--background-color: #fff;
 
-	background-color: #EDDDE7;
+	background-color: var(--background-color);
 
 	#theme-toggle div {
 		position: relative;
@@ -55,7 +56,7 @@ html[data-theme="light"] {
 		transform: scale(1);
 		transition: all 0.45s ease 0s;
 		overflow: hidden;
-		box-shadow: inset 8px -8px 0px 0px var(--theme-ui-colors-toggleIcon, #2d3748);
+		box-shadow: inset 8px -8px 0px 0px var(--theme-ui-colors-toggleIcon, rgba(233, 19, 105, 0.4));
 
 		&::before {
 			content: "";
@@ -94,16 +95,18 @@ html[data-theme="light"] {
 }
 
 html[data-theme="dark"] {
-	--very-light-text-color: #333;
+	--very-light-text-color: #143458;
 	--light-text-color: #ED1166;
+	--light-bg-color: rgba(233, 19, 105, 0.1);
 	--medium-text-color: #ED1166;
 	--main-text-color: #ddd;
 	--dark-text-color: #eee;
-	--link-color: #559AFF;
+	--link-color: #5793C8;
 	--display-dark: block;
 	--display-light: none;
+	--background-color: #0C2545;
 
-	background-color: #162547;
+	background-color: var(--background-color);
 
 	#theme-toggle div {
 		position: relative;
@@ -154,7 +157,7 @@ html[data-theme="dark"] {
 }
 
 body {
-	font-family: "Kelson Sans", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	text-rendering: optimizeLegibility; 
 	line-height: 1.75;
 	color: var(--main-text-color);
@@ -165,6 +168,14 @@ a {
 	text-decoration-skip-ink: auto;
 	text-decoration: none;
 }
+.nav-back {
+	position: fixed;
+	background-color: var(--background-color);
+	width: 100%;
+	max-width: 43rem;
+	top: 0;
+	padding: 50px 0 25px 0;
+}
 
 .post p {
 	margin: 0.5rem 0;
@@ -172,6 +183,11 @@ a {
 
 .meta {
 	margin: 2rem 0;
+}
+.meta a, .nav-back a {
+	background-color: var(--very-light-text-color);
+    padding: 2px 10px 5px 10px;
+    border-radius: 50px;
 }
 
 code,
@@ -197,7 +213,7 @@ img {
 }
 
 hr {
-	background: var(--medium-text-color);
+	background: var(--very-light-text-color);
 	height: 1px;
 	border: 0;
 }
@@ -239,12 +255,10 @@ blockquote {
 
 h1 {
 	color: var(--dark-text-color);
-	text-transform: uppercase;
+	font-size: 2rem;
 }
 
-h3 {
-	color: var(--medium-text-color);
-}
+
 
 h1,
 h2,
@@ -252,8 +266,11 @@ h3,
 h4,
 h5 {
 	font-weight: bold;
-	font-size: 1rem;
 	margin-bottom: 1.5rem;
+}
+
+h6 {
+	text-transform: uppercase;
 }
 
 section h1:first-child {
@@ -291,7 +308,7 @@ header ul {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .posts li a,
@@ -300,14 +317,17 @@ header ul {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	font-weight: bold;
+}
+
+.main-title {
+	font-size: 20px;
 }
 
 .posts li time,
 .projects li time {
-	padding-left: 1rem;
 	white-space: nowrap;
 	font-variant-numeric: tabular-nums;
+	padding-left: 5px;
 }
 
 time {
@@ -315,8 +335,10 @@ time {
 }
 
 .post > h1.title {
-	margin-top: 1.5rem;
+	margin-top: 4rem;
 	margin-bottom: 0;
+	font-size: 2.5rem;
+	color: var(--link-color);
 }
 
 .post > time {
