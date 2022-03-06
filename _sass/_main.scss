@@ -2,7 +2,6 @@
 :after,
 :before {
 	box-sizing: border-box;
-	background-color: inherit;
 	color: inherit;
 	margin: 0;
 	padding: 0;
@@ -271,6 +270,13 @@ h4,
 h5 {
 	font-weight: bold;
 	margin-bottom: 1.5rem;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a ,
+h5 a{
+	z-index: 10;
 }
 
 .post h1,
