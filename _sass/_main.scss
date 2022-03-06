@@ -40,6 +40,8 @@ html[data-theme="light"] {
 	--main-text-color: #333;
 	--dark-text-color: #111;
 	--link-color: #ED1166;
+	--display-dark: none;
+	--display-light: block;
 
 	background-color: #EDDDE7;
 
@@ -98,6 +100,8 @@ html[data-theme="dark"] {
 	--main-text-color: #ddd;
 	--dark-text-color: #eee;
 	--link-color: #559AFF;
+	--display-dark: block;
+	--display-light: none;
 
 	background-color: #162547;
 
@@ -317,6 +321,14 @@ time {
 
 .post > time {
 	margin-bottom: 2rem;
+}
+
+#dark-logo {
+	display: var(--display-dark);
+}
+
+#light-logo {
+	display: var(--display-light);
 }
 
 main {
