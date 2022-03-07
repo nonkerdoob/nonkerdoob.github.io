@@ -26,11 +26,20 @@
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
   <link rel="alternate" type="application/json" title="{{ site.title }}" href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="sitemap" type="application/xml" title="sitemap" href="{{ site.baseurl }}/sitemap.xml" />
+  <link rel="stylesheet" href="/assets/stylesheets/discordInvite.css"/>
       
   {% if site.googlewebfonts %}
     <link rel="preconnect" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9635f15d71.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/discordInvite.js"></script>
+<script>
+  discordInvite.init({
+  inviteCode: 'ZDwpFdb2sM',
+  title: 'Aegis7 Gaming',
+});
+discordInvite.render();
+</script>
   {% endif %}
 
   <style>
